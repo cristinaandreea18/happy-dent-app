@@ -1,0 +1,150 @@
+/* .message-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin: 10px auto;
+  border: 1px solid transparent;
+  font-family: sans-serif;
+box-sizing: border-box;
+  width: 80%; 
+  max-width: 500px; 
+  min-width: 300px; 
+  text-align: center; 
+}
+
+.message-box .icon {
+  font-size: 20px;
+}
+.message-box .content {
+  text-align: center; 
+}
+
+.message-box .title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+  text-transform: capitalize;
+}
+
+.message-box .text {
+  font-size: 14px;
+}
+
+.message-box.info {
+  background: #00796b;
+  border-color: #4db6ac;
+}
+
+.message-box.warning {
+  background: #f57c00;
+  border-color: #ffb300;
+}
+
+.message-box.error {
+  background: #c62828;
+  border-color: #ef5350;
+} */
+
+.message-box {
+  position: fixed;
+  top: 20px;
+  left: 60%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  padding: 12px 24px;
+  border: 1px solid transparent;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 80%;
+  min-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+
+.message-box .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  width: 100%;
+}
+
+@keyframes slideIn {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+  to {
+    top: 20px;
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease-in forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    top: 20px;
+    opacity: 1;
+  }
+  to {
+    top: -50px;
+    opacity: 0;
+  }
+}
+
+.message-box .icon {
+  font-size: 20px;
+}
+
+.message-box .content {
+  text-align: center;
+}
+
+.message-box .title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+  text-transform: capitalize;
+}
+
+.message-box .message {
+  font-size: 14px;
+}
+
+.message-box.info {
+  background: #00796b;
+  border-color: #4db6ac;
+  color: white;
+}
+
+.message-box.warning {
+  background: #f57c00;
+  border-color: #ffb300;
+  color: white;
+}
+
+.message-box.error {
+  background: #c62828;
+  border-color: #ef5350;
+  color: white;
+}
+
+.message-box.success {
+  background: #4caf50;
+  border-color: #81c784;
+  color: white;
+}

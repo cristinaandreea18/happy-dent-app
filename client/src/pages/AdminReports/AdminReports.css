@@ -1,0 +1,239 @@
+.admin-reports-page {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-reports-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  box-shadow: 0 4px 10px var(--shadow-color);
+  width: 100%;
+  max-width: calc(100% - 250px);
+  margin-left: 250px;
+  backdrop-filter: blur(10px);
+}
+
+.admin-reports-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+/**/
+.admin-reports-container.sidebar-open {
+  max-width: calc(100% - 250px);
+  margin-left: 250px;
+}
+
+.admin-reports-container.sidebar-closed {
+  max-width: 100%;
+  margin-left: 0;
+}
+
+/**/
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.admin-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/**/
+.report-filters {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.report-filters label {
+  font-weight: bold;
+}
+
+.report-filters select{
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.report-filters button {
+  margin-bottom: auto;
+}
+
+.report-table {
+  margin-top: 1rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.report-table table {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.report-table th,
+.report-table td {
+  width: 150px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.report-table th {
+  background-color: var(--tertiary-color);
+}
+
+.report-table h3 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+
+.calendar-wrapper {
+  display: grid;
+  grid-template-columns: auto repeat(var(--days), 1fr);
+  overflow-x: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 2rem;
+  overflow: visible !important; 
+  position: relative;
+  z-index: 0;
+}
+
+.day-column {
+  overflow: visible !important;
+  position: relative;
+}
+
+.calendar {
+  overflow: visible !important;
+  position: relative;
+}
+
+.calendar {
+  display: grid;
+  position: relative;
+  grid-template-columns: 100px repeat(var(--days), 120px);
+  min-width: max-content;
+}
+
+.time-column {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--tertiary-color);
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  border-right: 1px solid #ddd;
+}
+
+.time-column .time-slot,
+.time-column .day-label {
+  background-color: var(--tertiary-color); /* asigură-te că nu e transparent */
+}
+
+.time-slot {
+  height: 40px;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day-column {
+  border-left: 1px solid #ddd;
+  position: relative;
+}
+
+.day-label {
+  height: 40px;
+  background-color: var(--tertiary-color);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.appointment-box {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: white;
+  background-color: var(--primary-color);
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ffffffcc;
+}
+
+.tooltip {
+  top: -100%;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  padding: 8px 10px;
+  font-size: 12px;
+  white-space: pre-line;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+  width: max-content;
+  max-width: 200px;
+  background: rgba(0, 0, 0, 0.735);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+}
+
+.appointment-box:hover .tooltip {
+  opacity: 1;
+}
+
+.appointment-box.in-asteptare {
+  background-color: var(--status-pending); 
+}
+
+.appointment-box.confirmata {
+  background-color: var(--status-confirmed); 
+}
+
+.appointment-box.finalizata {
+  background-color: var(--status-completed); 
+}
+
+.appointment-box.anulata {
+  background-color: var(--status-cancelled); 
+}

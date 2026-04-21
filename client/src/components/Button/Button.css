@@ -1,0 +1,120 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+  padding: 10px 25px;
+  white-space: nowrap;
+}
+
+.btn-wrap {
+  text-align: center;
+  text-wrap: wrap; 
+  white-space: normal; 
+  word-break: break-word;
+  max-width: 120px;
+  border-radius: 12px;
+  background-color: var(--gradient-start);
+}
+
+.btn-primary {
+  background: var(--tertiary-color);
+  color: var(--text-color);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.btn-danger {
+  background: var(--error-color);
+  color: var(--text-color);
+}
+
+.btn-success {
+  background: var(--tertiary-color);
+  color: var(--text-color);
+}
+
+.btn-primary:hover {
+  background: var(--primary-color);
+  box-shadow: 0 0 10px var(--input-focus-glow);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  box-shadow: 0 0 10px var(--input-focus-glow);
+}
+
+.btn-danger:hover {
+  background: var(--primary-color);
+  box-shadow: 0 0 10px var(--input-focus-glow);
+}
+
+.btn-success:hover {
+  background: var(--primary-color);
+  box-shadow: 0 0 10px var(--input-focus-glow);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none !important;
+}
+
+.btn-small {
+  padding: 8px 16px;
+  font-size: 12px;
+}
+
+.btn-medium {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.btn-large {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+.btn-pending {
+  background: var(--status-pending); 
+  color: var(--text-color);
+}
+
+.btn-confirmed {
+  background: var(--status-confirmed);
+  color: var(--text-color);
+}
+
+.btn-cancelled {
+  background: var(--status-cancelled);
+  color: var(--text-color);
+}
+
+.btn-completed {
+  background: var(--status-completed);
+  color: var(--text-color);
+}
+
+.btn-pending:hover {
+  background: var(--status-pending-hover);
+}
+
+.btn-confirmed:hover {
+  background: var(--status-confirmed-hover);
+}
+
+.btn-cancelled:hover {
+  background: var(--status-cancelled-hover);
+}
+
+.btn-completed:hover {
+  background: var(--status-completed-hover);
+}

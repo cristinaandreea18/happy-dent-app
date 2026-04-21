@@ -1,0 +1,86 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-container {
+  position: relative;
+  background: var(--popup-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 270px;
+  text-align: center;
+  z-index: 1000;
+  border: 1px solid var(--text-color);
+  max-width: calc(100% - 40px);
+  color: var(--text-color);
+  margin: 0;
+  transform: none !important;
+  left: initial !important;
+  top: initial !important;
+  animation: fadeIn 0.2s ease-out; 
+}
+
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.popup-container h3 {
+  margin-top: 0;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: #dadce0;
+  margin: 8px 0;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.popup-btn-cancel {
+  background: var(--error-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.popup-btn-confirm {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.popup-btn-cancel:hover {
+  box-shadow: 0 2px 5px var(--input-focus-glow);
+}
+
+.popup-btn-confirm:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px var(--input-focus-glow);
+}

@@ -1,0 +1,253 @@
+.doctor-profile-page {
+  display: flex;
+  /* background: linear-gradient(180deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end)); */
+  background: var(--gradient-start);
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+}
+
+.doctor-profile-container {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 250px;
+  overflow-y: hidden;
+}
+
+.profile-header-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.profile-header-centered img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.profile-header-centered h2 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.profile-subtitle {
+  color: var(--input-border-color);
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* .doctor-header h1 {
+  font-size: 24px;
+  color: var(--text-color);
+} */
+
+.dashboard-content {
+  display: flex;
+  gap: 30px;
+  height: 100%;
+  min-height: calc(100vh - 150px);
+}
+
+.patients-list {
+  flex: 0 0 350px;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.patients-list h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.patient-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.patient-card {
+  background: var(--tertiary-color);
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid var(--input-border-color);
+}
+
+.patient-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.patient-card.selected {
+  border: 2px solid var(--primary-color);
+  background: var(--secondary-color);
+}
+
+.patient-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--input-border-color);
+}
+
+.patient-info h3 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-color);
+} 
+
+.patient-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: var(--input-border-color);
+}
+
+.right-column {
+ flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.no-patients {
+  text-align: center;
+  padding: 20px;
+  color: var(--input-border-color);
+}
+
+.doctor-profile-details {
+  flex-grow: 1;
+  height: 100%; 
+  background: var(--tertiary-color);  
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid var(--input-border-color);
+}
+
+.no-patient-selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--input-border-color);
+  font-size: 18px;
+}
+
+.details-container {
+  color: var(--text-color);
+}
+
+/* .doctor-header p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.doctor-header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.doctor-header h2 {
+  margin: 0;
+  font-size: 22px;
+} */
+
+.doctor-profile-p {
+  color: var(--input-border-color);
+  margin-top: 5px;
+}
+
+ .details-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.detail-section {
+  flex: 0 0 32%;
+  background: var(--input-focus-glow);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--input-border-color);
+}
+
+.detail-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--primary-color);
+  font-size: 16px;
+  color: var(--primary-color);
+}
+
+.detail-section p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+  .dashboard-content {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .doctor-profile-details{
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* .doctor-header img {
+    width: 80px;
+    height: 80px;
+  } */
+  
+  .detail-section {
+    padding: 15px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0fb9c5;
+}

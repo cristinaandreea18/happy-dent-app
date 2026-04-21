@@ -1,0 +1,251 @@
+.full-calendar-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: 2px solid var(--input-focus-glow) !important;
+  background: var(--patient-color-card) !important;
+}
+
+.fc-header-toolbar {
+  margin-bottom: 1em;
+}
+
+.fc .fc-timegrid-slot-label {
+  padding-top: 15px !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today,
+.fc .fc-timegrid-col.fc-day-today {
+  background-color: var(--input-focus-glow) !important;
+}
+
+.fc .fc-button-primary:disabled {
+  border-color: var(--secondary-color)!important;
+}
+
+.fc .fc-button-primary {
+  border-color: var(--secondary-color)!important;
+}
+
+.fc .fc-button {
+  background: var(--tertiary-color) !important;
+  border: 1px solid transparent;
+  border-radius: 0.25em;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.4em 0.65em;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+}
+
+.fc .fc-button:hover {
+  background: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+}
+
+.fc .fc-button-active {
+  background: var(--input-focus-glow) !important;
+  border-color: var(--input-focus-glow) !important;
+}
+
+.fc-timegrid-event-harness {
+  width: 100% !important;
+  left: 0 !important;    
+}
+
+/**/
+/* Suprascriere stil implicit pentru vizualizarea lunară */
+.fc-dayGridMonth-view .fc-event {
+  background-color: unset !important;
+  color: white !important;
+}
+
+/* Culoare personalizată în funcție de status */
+.fc-event.status-in-asteptare {
+  background-color: var(--status-pending-hover) !important;
+  color: black !important;
+}
+
+.fc-event.status-confirmata {
+  background-color: var(--status-confirmed-hover) !important;
+}
+
+.fc-event.status-finalizata {
+  background-color: var(--status-completed-hover) !important;
+}
+
+.fc-event.status-anulata {
+  background-color: var(--status-cancelled-hover) !important;
+}
+
+/**/
+
+.short-event {
+  height: 30px !important;
+}
+
+.medium-event {
+  height: 60px !important;
+}
+
+.long-event {
+  height: 90px !important;
+}
+
+.event-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 5px;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: #dadce0;
+  margin: 8px 0;
+}
+
+.event-plus {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-left: 5px;
+}
+
+.event-details-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: var(--tertiary-color);
+  border: 1px solid var(--text-color);
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Asigură-te că sărbătorile sunt vizibile deasupra altor evenimente */
+.fc .holiday-bg {
+  z-index: 10 !important;       /* Prioritate peste evenimente normale */
+  opacity: 0.3 !important;      /* Transparență vizibilă */
+}
+
+/* Forțează culorile în dayGridMonth */
+.fc-dayGridMonth-view .fc-event {
+  /* background-color: inherit !important;  */
+  background-color: var(--input-focus-glow)!important; /* culoare fundal */
+  border-color: inherit !important;
+  color: white !important; /* culoare text */
+  font-size: 0.8em;
+  padding: 2px 4px;
+  margin: 1px;
+  border-radius: 3px;
+}
+
+/* Opțional: Stiluri diferite pentru hover */
+.fc-dayGridMonth-view .fc-event:hover {
+  opacity: 0.9;
+}
+
+.completion-section {
+  margin-top: 1rem;
+}
+
+.completion-message {
+  margin-bottom: 1.5rem; /* Increased space below the message */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.completion-buttons {
+  display: flex;
+  justify-content: space-between; /* This will push buttons to opposite sides */
+  margin-top: 1rem;
+}
+
+.button-left {
+  margin-right: auto; /* Pushes to the left */
+}
+
+.button-right {
+  margin-left: auto; /* Pushes to the right */
+}
+
+/* If you want to add more space between the buttons when they're side by side */
+.button-left + .button-right {
+  margin-left: 1rem;
+}
+
+/* Adăugați în fișierul CSS */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-container {
+  background: var(--patient-color-card);
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.new-appointment-form {
+  margin: 15px 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  /* background: var(--patient-color-card); */
+}
+
+.form-group textarea {
+  min-height: 80px;
+}

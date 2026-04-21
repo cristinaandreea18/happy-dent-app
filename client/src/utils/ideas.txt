@@ -1,0 +1,48 @@
+ADMIN: criiis-r,Admin1234$
+parola temporara doctor: Doctor!
+
+->schimbare parola
+->logout
+->schimbare culori
+->schimbare formular de adaugare doctor
+->mesaje/pop-up pentru stergere
+
+TO-DO:
+ *logo personalizat 
+ *useri cu acelasi username?
+ *coloanele adaugate ulterior in model sunt afisate la final dupa createdAt
+ *schimbare parola medic la conectare dupa ce adminul creeaza cont
+ *fiecare fisa ar trebui sa fie numerotata pentru pacienti
+ *assigned services & working hours
+ *filtrare si sortare in admin dashboard
+ *eventual email,phone sub o singura coloana contact
+ *my profile in doctor-dashboard
+DONE:
+*validari user-register
+*confirm password
+
+User Profile
+
+to-do:
+  *rezolvare pentru 404 cand sunt pe pagina de profil si nu am creat inca contul
+  *fotografie profil
+  *id din baza ->max+1 existent...deocamdata porneste de la max+1 anterior stergerii
+  *schimbare logo
+  
+done:
+  *ar fi tare,sa implementez ceva ca in functie de judet sa imi caute orasul/satul
+   -> lista derulanta judete + orase pentru adresa
+  *email-ul sa corespunda cu cel facut cand a fost creat contul pe platforma
+  *butonul create sa devina inactiv dupa ce s-a creat contul sau sa dispara daca haseste mail-ul in baza
+  *se poate crea un singur cont aferent mail-ului de inregistrare(sa poti apasa create o singura data)
+  *formatul in baza schimbat an.luna.zi..ora => zi.luna.an
+  *validari:
+    ->nr telefon de 10 cifre
+    ->cnp de 13 cifre
+    ->cnp si data nasterii sa aiba caractere comune
+
+
+
+
+
+ 

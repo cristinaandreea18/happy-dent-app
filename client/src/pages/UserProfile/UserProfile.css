@@ -1,0 +1,161 @@
+body {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.profile-page-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg, 
+    var(--gradient-start), 
+    var(--gradient-mid), 
+    var(--gradient-end)
+  );
+  width: 100vw;
+}
+
+.profile-input-text::placeholder {
+  color: var(--text-color);
+  opacity: 0.7; 
+}
+
+.profile-main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  margin-left: 250px; /* Lățimea sidebar-ului */
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--input-border-color);
+}
+
+.profile-header h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-form-container {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 15px var(--shadow-color);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.profile-form input {
+  background-color: var(--primary-color);
+}
+
+
+.profile-input-box {
+  margin-bottom: 0.5rem;
+}
+
+.profile-input-box label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.profile-input-box input,
+.profile-input-box select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--input-border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  transition: all 0.3s;
+  color: var(--text-color);
+}
+
+.profile-input-box input:focus,
+.profile-input-box select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.profile-input-box input[type="date"] {
+  appearance: none;
+}
+
+.profile-input-box input[readonly] {
+  background-color: var(--primary-color);
+  cursor: not-allowed;
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+
+.profile-buttons-container{
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center; /* Centrează orizontal */
+  margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .profile-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-main-content {
+    margin-left: 0;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .user-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .profile-form-container {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}

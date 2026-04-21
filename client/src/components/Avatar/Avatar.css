@@ -1,0 +1,235 @@
+.avatar-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.avatar-image-container {
+  position: relative;
+}
+
+.avatar-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--text-color); 
+  box-shadow: 0 2px 5px var(--shadow-color); 
+  object-fit: cover;
+}
+
+.admin-badge, .doctor-badge,.patient-badge {
+  position: absolute;
+  bottom: -5px;
+  right: -1px;
+  background-color: var(--error-color); 
+  color: var(--text-color);
+  border-radius: 12px;
+  padding: 3px 12px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.doctor-badge {
+  background-color: var(--tertiary-color);
+}
+
+.patient-badge {
+  background-color: var(--status-completed);
+}
+
+.admin-badge {
+  background-color: var(--error-color);
+}
+
+.avatar-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 250px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.dropdown-header {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-header h3 {
+  margin: 8px 0 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.dropdown-header p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.dropdown-section {
+  margin: 12px 0;
+}
+
+.section-title {
+  font-size: 14px;
+  color: #5F6368;
+  margin: 8px 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-option {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 14px;
+  color: #202124;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-option:hover {
+  background-color: #f1f3f4;
+}
+
+.dropdown-option .material-icons-outlined {
+  margin-right: 12px;
+  color: #5F6368;
+  font-size: 20px;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: #dadce0;
+  margin: 8px 0;
+}
+
+.logout-btn {
+  color: #d93025; /* Roșu Google */
+}
+
+.logout-btn .material-icons-outlined {
+  color: #d93025;
+}
+
+.avatar-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color); 
+}
+
+.avatar-role {
+  font-size: 12px;
+  color: var(--secondary-color); 
+}
+
+/**/
+.notification-icon {
+  position: relative;
+  margin-right: 15px;
+  cursor: pointer;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff4757;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+.notifications-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.notifications-header h3 {
+  color:#202124;
+  font-size: 1.2rem;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.notifications-header button {
+  color: #202124;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.notifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.notification-item:hover {
+  background-color: #f9f9f9;
+}
+
+.notification-item p {
+  color: #202124;
+  font-size: 0.9rem;
+  margin: 0 0 4px 0;
+}
+
+.notification-item small {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.no-notifications {
+  padding: 16px;
+  text-align: center;
+  color: #888;
+}

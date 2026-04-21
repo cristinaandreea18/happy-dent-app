@@ -1,0 +1,126 @@
+/* :root {
+  --primary-color:#075255;
+  --secondary-color:#11dae3;
+  --tertiary-color:#726ECD;
+  --gradient-start:rgba(7, 43, 45, 1);
+  --gradient-mid:rgba(7, 82, 85, 1);
+  --gradient-end:rgba(17, 218, 227, 1);
+  --input-border-color:rgba(255, 255, 255, 0.7);
+  --input-form-color:rgba(255, 255, 255, 0.1);
+  --input-form--color:rgba(255, 255, 255, 0.05);
+  --input-color:rgba(255 ,255, 255, 0.5);
+  --input-focus-glow:rgba(17, 218, 227, 0.5);
+  --text-color:#fff;
+  --text-light-blue:#bae3e5;
+  --text-dark:#333;
+  --shadow-color:rgba(0, 0, 0, 0.2);
+  --patient-color-card: #075255;
+  --sidebar-color:rgba(5, 89, 94, 0.9);
+  --sidebar-hover:rgba(17, 218, 227, 0.15);
+  --error-color:tomato;
+  --error-color-background:rgb(236, 212, 208);
+  --popup-color: #7e79e5;
+  --appointment-card: #413c99;
+  
+  --status-pending: #f1c40f;
+  --status-pending-hover: #d4ac0d;
+  --status-confirmed: #2c3e50; 
+  --status-confirmed-hover: #1b2a38;;
+  --status-cancelled: #e74c3c;
+  --status-cancelled-hover: #c0392b;
+  --status-completed: #1d8348;
+  --status-completed-hover: #145a32;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+  background:var(--error-color-background);
+  padding: 5px;
+  border-radius: 5px;
+} */
+
+:root {
+  --primary-color: #1c5e63;
+  --secondary-color: #0eb6bf; /* darker turquoise */
+  --tertiary-color: #a89be8; /* light purple */
+
+  --gradient-start: #1e3d4c;
+  --gradient-mid: #4c9ba9;
+  --gradient-end: #a89be8;
+
+  --input-border-color: rgba(255, 255, 255, 0.7); /* semi-transparent white */
+  --input-form-color: rgba(255, 255, 255, 0.1);
+  --input-form--color: rgba(255, 255, 255, 0.05);
+  --input-color: rgba(255, 255, 255, 0.5);
+  --input-focus-glow: rgba(14, 182, 191, 0.5); /* adjusted turquoise glow */
+
+  --text-color: #fff;
+  --text-light-blue: #9edce0; /* lighter blue for links */
+  --text-dark: #333; /* dark grey for buttons */
+
+  --shadow-color: rgba(0, 0, 0, 0.2);
+
+  --patient-color-card: #1c5e63;
+  --sidebar-color: rgba(28, 94, 99, 0.9); /* adjusted to match new primary */
+  --sidebar-hover: rgba(14, 182, 191, 0.15); /* adjusted turquoise */
+
+  --error-color: tomato;
+  --error-color-background: #ecd4d0;
+
+  --popup-color: #a89be8;
+  --appointment-card: #6aaec0;
+
+  /* Status buttons */
+  --status-pending: #f1c40f;
+  --status-pending-hover: #d4ac0d;
+  --status-confirmed: #2c3e50; 
+  --status-confirmed-hover: #1b2a38;
+  --status-cancelled: #e74c3c;
+  --status-cancelled-hover: #c0392b;
+  --status-completed: #1d8348;
+  --status-completed-hover: #145a32;
+}
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+  background:var(--error-color-background);
+  padding: 5px;
+  border-radius: 5px;
+}

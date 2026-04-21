@@ -1,0 +1,29 @@
+.confirmation-container {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.confirmation-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.reschedule-confirm-button, .reschedule-cancel-button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.reschedule-confirm-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.reschedule-cancel-button {
+  background-color: #f44336;
+  color: white;
+}
+
